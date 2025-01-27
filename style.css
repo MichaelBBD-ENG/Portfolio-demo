@@ -62,6 +62,8 @@ body{
     height: 500px;
     border-radius: 50%;
     filter: blur(100px);
+    z-index: -1;
+    margin-left: 40vw;
     animation: globe1bounce 10s infinite;
 }
 
@@ -75,8 +77,48 @@ body{
     }
 }
 
-.container{
-    z-index: 10;
+#globe2{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 120vh;
+    margin-left: -20vw;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    animation: globe2bounce 10s infinite;
+}
+
+/* make globe2 bounce up and down slowly using bezier curve */
+@keyframes globe2bounce{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-200px);
+    }
+}
+
+#globe4{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(100px);
+    top: 280vh;
+    left: 50vw;
+    z-index: -1;
+    animation: globe4fullrotate 10s infinite;
+}
+
+/* make globe4 rotate slowly using bezier curve */
+@keyframes globe4fullrotate{
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
 }
 
 header {
@@ -91,7 +133,8 @@ header {
     margin-top: 1rem;
     position: fixed;
     background: var(--primary-background-color-30);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
+    z-index: 9999;
 }
 
 header span{
@@ -138,7 +181,7 @@ header section a h4:active{
     margin-top: calc(50px + 4rem);
 }
 
-#home{
+#home, #about, #projects, #contact{
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -159,6 +202,7 @@ header section a h4:active{
 
 .main-content section .foreground-text{
     margin-top: -60px;
+    margin-bottom: 2rem;
 }
 
 .main-content section p{
@@ -187,6 +231,160 @@ header section a h4:active{
 
 .main-content section button:active{
     transform: scale(0.95);
+}
+
+.main-content #about .timeline {
+    padding: 20px;
+}
+
+.main-content #about .outer {
+    border-left: 2px solid var(--secondary-text-color-50);
+}
+
+.main-content #about .card {
+    position: relative;
+    margin: 0 0 20px 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.main-content #about .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-content #about .info p {
+    line-height: 32px;
+}
+
+.main-content #about .title {
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-text-color);
+    border-radius: 999px;
+    left: -36px;
+}
+
+.main-content #projects aside{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.main-content #projects article{
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--secondary-text-color-50);
+    transition: 0.3s transform ease-in-out;
+    cursor: pointer;
+    width: 258px;
+    margin-right: 5rem;
+}
+
+.main-content #projects article h3{
+    margin-top: -1rem;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.main-content #projects article h4{
+    font-size: 16px;
+    margin-left: 5px;
+    text-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.main-content #projects article button{
+    margin-top: 2rem;
+    border: none;
+    border-radius: 14px;
+    background: var(--primary-text-color);
+    color: var(--secondary-text-color);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s transform ease-in-out;
+    width: 246px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.main-content #projects article button:hover{
+    transform: scale(1);
+}
+
+.main-content #projects article:hover{
+    transform: scale(1.05);
+}
+
+.main-content #projects article:active{
+    transform: scale(0.95);
+}
+
+.main-content #projects article nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 258px;
+    height: 167px;
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+
+.main-content #projects article nav img{
+    display: inline;
+    min-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-content #contact nav {
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.main-content #contact nav p {
+    margin-left: 1rem;
+}
+
+.main-content #contact nav .email-container, .main-content #contact nav .phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 150px;
+    background: #c6c6c61b;
+    border-radius: 20px;
+}
+
+.main-content #contact nav .email-container nav, .main-content #contact nav .phone-container nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+.main-content #contact nav .email-container nav img, .main-content #contact nav .phone-container nav img {
+    display: inline;
+    min-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 footer {

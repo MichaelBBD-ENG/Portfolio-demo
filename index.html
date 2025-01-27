@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://raw.githubusercontent.com/waveyboym/waveyboym.github.io/e11cc1ea30fe25794c5bc8927fb6e79e52957c1b/icon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +13,16 @@
     <title>Michael's portolio</title>
 </head>
 <body>
-    <main class="background-objects">
+    <main class="all-content">
         <div id="globe1">
             <img src="https://raw.githubusercontent.com/waveyboym/portfolio-src-files/516772beb485895dde4ce5b31d0d881f31ec70ce/portfolio-src-code/src/assets/Vector1.svg" alt="globe">
         </div>
-    </main>
-    <main class="container">
+        <div id="globe2">
+            <img src="https://raw.githubusercontent.com/waveyboym/portfolio-src-files/516772beb485895dde4ce5b31d0d881f31ec70ce/portfolio-src-code/src/assets/Vector3.svg" alt="globe">
+        </div>
+        <div id="globe4">
+            <img src="https://raw.githubusercontent.com/waveyboym/portfolio-src-files/516772beb485895dde4ce5b31d0d881f31ec70ce/portfolio-src-code/src/assets/Vector4.svg" alt="globe">
+        </div>
         <header>
             <span>
                 <img src="https://raw.githubusercontent.com/waveyboym/waveyboym.github.io/e11cc1ea30fe25794c5bc8927fb6e79e52957c1b/icon.svg" alt="logo">
@@ -34,34 +39,96 @@
             <section id="home">
                 <h1 class="background-text">Michael's Portfolio</h1>
                 <h1 class="foreground-text">Michael's Portfolio</h1>
-                <p>Hi, I'm Michael and I'm a web developer. I love to create websites and web applications. I'm currently learning React and I'm looking for a job as a web developer.</p>
-                <button>See more</button>
+                <p>Hi, I'm Michael and I'm a software engineer from south africa and I love to code. I'm a full-stack developer with a passion for backend and low-level programming.</p>
+                <button><a href="#about">See more</a></button>
             </section>
             <section id="about">
                 <h1 class="background-text">About me</h1>
                 <h1 class="foreground-text">About me</h1>
-                <p>I'm a web developer from the United States. I love to create websites and web applications. I'm currently learning React and I'm looking for a job as a web developer.</p>
+                <aside class="timeline">
+                    <div class="outer">
+                        <article class="card">
+                            <nav class="info">
+                                <h3 class="title">Where I began - 2021</h3>
+                                <p>I started off with diving into the world of coding by learning c++. I spent a year teaching myself c++ and now I dislike it.☹️</p>
+                            </nav>
+                        </article>
+                        <article class="card">
+                            <nav class="info">
+                                <h3 class="title">Onwards to better things - 2022</h3>
+                                <p>
+                                    After battling C++, I ventured into web dev—starting with HTML & CSS before leveling up to JavaScript. 
+                                    Been at it for 3 years now. Do I like it? Well, I still can't center a div. 😂 
+                                    But hey, I made this website, so that’s something! My arsenal: HTML, CSS, JS, React, Node.js, Express, MongoDB, & SQL.
+                                </p>
+                            </nav>
+                        </article>
+                        <article class="card">
+                            <nav class="info">
+                                <h3 class="title">Now we're talking, yes! YES! - 2023/4</h3>
+                                <p>Full circle moment: I fell in love with backend and low-level programming. Learned the crustacean language (Rust) and built 
+                                    cool stuff—a compiler, game engine, mini OS, networking servers, and audio players. Now diving into microcontrollers, 
+                                    embedded systems, and OS development with C and Rust. Also, planning to hack your toaster. 😈 …Tomorrow. Maybe.
+                                </p>
+                            </nav>
+                    </div>
+                </aside>
             </section>
             <section id="projects">
                 <h1 class="background-text">My projects</h1>
                 <h1 class="foreground-text">My projects</h1>
-                <article>
-                    <h3>Project 1</h3>
-                    <p>This is a project I created using HTML, CSS, and JavaScript. It's a simple website that displays a list of items.</p>
-                </article>
-                <article>
-                    <h3>Project 2</h3>
-                    <p>This is a project I created using React. It's a simple web application that displays a list of items.</p>
-                </article>
-                <article>
-                    <h3>Project 3</h3>
-                    <p>This is a project I created using Node.js and Express. It's a simple web application that displays a list of items.</p>
-                </article>
+                <aside>
+                    <a href="https://muzik-apps.github.io/muzik-web/" target="_blank">
+                        <article>
+                            <nav>
+                                <img src="./muzik.png" alt="muzik">
+                            </nav>
+                            <h3>Muzik-offline</h3>
+                            <h4>Enables you to beautify your music listening experience for offline music</h4>
+                            <button><a href="https://muzik-apps.github.io/muzik-web/" target="_blank">See more</a></button>
+                        </article>
+                    </a>
+                    <a href="https://muzik-apps.github.io/muzik-web/" target="_blank">
+                        <article>
+                            <nav>
+                                <img src="./note-app.png" alt="note-app">
+                            </nav>
+                            <h3>Scribble</h3>
+                            <h4>Jot down aesthetically pleasing notes and manage your notes elegantly</h4>
+                            <button><a href="https://github.com/waveyboym/text-editor-notepad" target="_blank">See more</a></button>
+                        </article>
+                    </a>
+                    <a href="https://muzik-apps.github.io/muzik-web/" target="_blank">
+                        <article>
+                            <nav>
+                                <img src="./wvydbms.png" alt="wvydbms">
+                            </nav>
+                            <h3>WVYDBMS</h3>
+                            <h4>A gorgeuos GUI to theraputize database management for you pleasure</h4>
+                            <button><a href="https://github.com/waveyboym/WVY-DBMS" target="_blank">See more</a></button>
+                        </article>
+                    </a>
+                </aside>
             </section>
             <section id="contact">
                 <h1 class="background-text">Contact Details</h1>
                 <h1 class="foreground-text">Contact Details</h1>
-                <p>If you would like to contact me, you can send me an email at <a href="mailto:u21546551@tuks.co.za"></a></p>
+                <nav>
+                    <span class="email-container">
+                        <nav>
+                            <img src="email.jpg" alt="email">
+                        </nav>
+                    </span>
+                    <p>send me an email at <a href="mailto:lmao@uthought.com">lmao@uthought.com</a></p>
+                </nav>
+                <nav>
+                    <span class="phone-container">
+                        <nav>
+                            <img src="phone.png" alt="phone">
+                        </nav>
+                    </span>
+                    <p>call me at <a href="mailto:lmao@uthought.com">chile, i'm not dropping my number</a></p>
+                </nav>
             </section>
         </main>
         <footer>
