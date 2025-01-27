@@ -421,7 +421,6 @@ footer .footer-links{
 
 footer .footer-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-top: 1rem;
@@ -445,6 +444,32 @@ footer .footer-content .languages nav{
 }
 
 footer .footer-content .languages nav img{
+    display: inline;
+    min-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer .footer-content .social-media{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-left: 150px;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .footer-content .social-media a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+}
+
+footer .footer-content .social-media a img{
     display: inline;
     min-width: 100%;
     margin: 0 auto;
