@@ -156,8 +156,8 @@ header {
     margin-top: 1rem;
     position: fixed;
     background: var(--primary-background-color-30);
-    backdrop-filter: blur(var(--standard-blur));
     --webkit-backdrop-filter: blur(var(--standard-blur));
+    backdrop-filter: blur(var(--standard-blur));
     z-index: var(--highest-z-index);
     container-type: inline-size;
 }
